@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI C Tutor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        AI C Tutor Bot
+    </div>
+
+    <div class="chat-box">
+       {% if result %}
+<div class="user-msg">
+    {{query}}
+</div>
+
+<div class="bot-msg">
+    {{result}}
+</div>
+{% endif %}
+
+
+    </div>
+
+   <form method="post" action="/ask" class="input-area">
+    <input type="text" name="query" required>
+    <button type="submit">Send</button>
+</form>
+
+</div>
+
+</body>
+</html>
